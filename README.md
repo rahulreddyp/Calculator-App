@@ -1,5 +1,5 @@
 # A simple Calculator
-This is a simple calculator application whose functionality is achieved using Javascript.
+This is a simple calculator application whose functionality is achieved using plain vanilla Javascript.
 
 ## Technologies used:
 - HTML [Structure]
