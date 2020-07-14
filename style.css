@@ -1,5 +1,6 @@
 body{
     font-family: 'Open Sans', sans-serif;
+    background-color: black;
 }
 
 #container {
@@ -40,6 +41,12 @@ body{
     height: 60px;
     margin: 10px 20px;
     font-size: 30px;
+}
+
+#output-value{
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
 }
 
 #keypad{
