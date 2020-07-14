@@ -5,17 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-    <title>Simple Calculator App</title>
+    <title>Calculator App with Voice Input</title>
+    <link rel="Calculator Icon" href="Images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div id="container">
         <div id="calculator">
             <div id="result">
-                <div id="history">
-                    <p id="history-value"></p>
+                <div id="output-text">
+                    <div id="history">
+                        <p id="history-value"></p>
+                    </div>
+                    <div id="output">
+                        <p id="output-value"></p>
+                    </div>            
                 </div>
-                <div id="output">
-                    <p id="output-value"></p>
+                <div id="output-microphone">
+                    <span id="microphone">
+                    </span>                    
+                    <span class="tooltip">
+                        Operations are plus, minus, multiply, divide &amp; reminder.
+						The user must provide input in the following format number + operation + number<br><br>
+						Eg: 2 multiply 5 will be 2 &times 5
+                    </span>
                 </div>
                 
             </div>
