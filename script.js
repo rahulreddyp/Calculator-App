@@ -24,11 +24,12 @@ function getFormattedNumber(num){
         return "";
     }
     var n = Number(num);
-    var value = n.toLocaleString("en");
+    var value = n.toLocaleString("en", {maximumFractionDigits : 2});
     return value;
 }
 
 function reverseNumberFormat(num){
+    // TODO: convert into floating value if it num has decimal point
     return Number(num.replace(/,/g,''));
 }
 
@@ -59,11 +60,6 @@ for(var i=0;i<operator.length;i++){
             }
             output = output==0?0:output;
             printOutput(output);
-        }
-        else if(this.id=="."){
-            //TODO: decimal values
-            // output=reverseNumberFormat(getOutput()).toString()+".";
-            // printOutput(output);
         }
         else{
             output=getOutput();
@@ -99,6 +95,10 @@ for(var i=0;i<number.length;i++){
         if(output!=NaN) // if output is number
         {
             output = output+this.id;
+            //TODO: decimal value correction
+            if(this.id=="." && !getOutput().includes('.')){
+                output=reverseNumberFormat(output).toString()+".";
+            }
             printOutput(output);
         }
     });
